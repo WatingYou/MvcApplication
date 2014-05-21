@@ -1,0 +1,57 @@
+﻿@model App.Models.Sys.SysRoleModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Index_LayoutEdit.cshtml";
+}
+<table class="fromEditTable setTextWidth300">
+    <tbody>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                Name：
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                Description：
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Description)
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                CreateTime：
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreateTime)
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                CreatePerson：
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreatePerson)
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                UserName：
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.UserName)
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                Flag：
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Flag)
+            </td>
+        </tr>
+    </tbody>
+</table>

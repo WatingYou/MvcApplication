@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB83C9A2-396A-4878-AFED-5D2A241DD39B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.BLL</RootNamespace>
+    <AssemblyName>App.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountBLL.cs" />
+    <Compile Include="BaseBLL.cs" />
+    <Compile Include="Core\ExceptionHander.cs" />
+    <Compile Include="HomeBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysExceptionBLL.cs" />
+    <Compile Include="SysLogBLL.cs" />
+    <Compile Include="SysModuleBLL.cs" />
+    <Compile Include="SysModuleOperateBLL .cs" />
+    <Compile Include="SysRightBLL.cs" />
+    <Compile Include="SysRoleBLL.cs" />
+    <Compile Include="SysSampleBLL .cs" />
+    <Compile Include="SysUserBLL .cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.Common\App.Common.csproj">
+      <Project>{7F4E2577-3784-4EC2-A7E5-806ED59557E7}</Project>
+      <Name>App.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.DAL\App.DAL.csproj">
+      <Project>{3DAB4BBC-EAD2-496B-B1F8-31D77EB85494}</Project>
+      <Name>App.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.IBLL\App.IBLL.csproj">
+      <Project>{57B99716-AACD-49C3-BC15-955B57D35903}</Project>
+      <Name>App.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.IDAL\App.IDAL.csproj">
+      <Project>{A3523931-FF89-4302-8B79-71684FA52608}</Project>
+      <Name>App.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Models\App.Models.csproj">
+      <Project>{1F112DA0-6FFA-4CEA-AC4A-5BC1D4C4E2F0}</Project>
+      <Name>App.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
